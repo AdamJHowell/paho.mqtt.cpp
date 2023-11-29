@@ -1,6 +1,6 @@
 # Eclipse Paho MQTT C++ Client Library
 
-This repository contains the source code for the [Eclipse Paho](http://eclipse.org/paho) MQTT C++ client library for memory-managed operating systems such as Linux, MacOS, and Windows.
+This repository contains the source code for the [Eclipse Paho](http://eclipse.org/paho) MQTT C++ client library for memory-managed operating systems such as Linux, macOS, and Windows.
 
 This code builds a library which enables Modern C++ applications (C++11 and beyond) to connect to an [MQTT](http://mqtt.org) broker, publish messages, subscribe to topics, and receive messages from the broker.
 
@@ -82,7 +82,7 @@ The first new release in a while! It's primarily a bug-fix release, but has a fe
 Two new releases are planned for the near future:
 
 - v1.4 will add some minor new features like callback-per-subscription (see [#202](https://github.com/eclipse/paho.mqtt.cpp/issues/202)) and continue with bug fixes and improvements to the build system.
-- v1.5 will upgrade the library to C++17 and start adding features the the newer C++ versions support, like an API that uses `std::variant<>`, `std::option<>`, `constexpr`, and so on.
+- v1.5 will upgrade the library to C++17 and start adding features the newer C++ versions support, like an API that uses `std::variant<>`, `std::option<>`, `constexpr`, and so on.
 
 ## Contributing
 
@@ -102,16 +102,16 @@ The Paho C++ library requires the Paho C library, v1.3.13 or greater, to be buil
 
 CMake allows for options to direct the build. The following are specific to Paho C++:
 
-Variable | Default Value | Description
------------- | ------------- | -------------
-PAHO_BUILD_SHARED | TRUE (Linux), FALSE (Win32) | Whether to build the shared library
-PAHO_BUILD_STATIC | FALSE (Linux), TRUE (Win32) | Whether to build the static library
-PAHO_WITH_SSL | TRUE (Linux), FALSE (Win32) | Whether to build SSL/TLS support into the library
-PAHO_BUILD_DOCUMENTATION | FALSE | Create the HTML API documentation (requires _Doxygen_)
-PAHO_BUILD_SAMPLES | FALSE | Whether to build the sample programs
-PAHO_BUILD_TESTS | FALSE | Build the unit tests. (Requires _Catch2_)
-PAHO_BUILD_DEB_PACKAGE | FALSE | Flag that configures cpack to build a Debian/Ubuntu package
-PAHO_WITH_MQTT_C | FALSE | Whether to build the bundled Paho C library
+| Variable                 | Default Value               | Description                                                 |
+|--------------------------|-----------------------------|-------------------------------------------------------------|
+| PAHO_BUILD_SHARED        | TRUE (Linux), FALSE (Win32) | Whether to build the shared library                         |
+| PAHO_BUILD_STATIC        | FALSE (Linux), TRUE (Win32) | Whether to build the static library                         |
+| PAHO_WITH_SSL            | TRUE (Linux), FALSE (Win32) | Whether to build SSL/TLS support into the library           |
+| PAHO_BUILD_DOCUMENTATION | FALSE                       | Create the HTML API documentation (requires _Doxygen_)      |
+| PAHO_BUILD_SAMPLES       | FALSE                       | Whether to build the sample programs                        |
+| PAHO_BUILD_TESTS         | FALSE                       | Build the unit tests. (Requires _Catch2_)                   |
+| PAHO_BUILD_DEB_PACKAGE   | FALSE                       | Flag that configures cpack to build a Debian/Ubuntu package |
+| PAHO_WITH_MQTT_C         | FALSE                       | Whether to build the bundled Paho C library                 |
 
 In addition, the C++ build might commonly use `CMAKE_PREFIX_PATH` to help the build system find the location of the Paho C library.
 
@@ -122,7 +122,7 @@ On *nix systems CMake creates Makefiles.
 The build process currently supports a number of Unix and Linux flavors. The build process requires the following tools:
 
   * CMake v3.5 or newer
-  * A fully-compatible C++11 compiler (GCC, Clang, etc)
+  * A fully-compatible C++11 compiler (GCC, Clang, etc.)
 
 On Debian based systems this would mean that the following packages have to be installed:
 
@@ -233,7 +233,7 @@ It's better not to mix DLLs and static libraries, but if you do link the Paho C+
 
 #### Building the Library on Windows
 
-The build process currently supports a number Windows versions. The build process requires the following tools:
+The build process currently supports a number of Windows versions. The build process requires the following tools:
   * CMake GUI v3.5 or newer
   * Visual Studio 2015 or newer
 
