@@ -57,7 +57,7 @@ const int QOS = 1;
 // This is just here to show how the persistence API callbacks work. It maps
 // well to key/value stores, like Redis, but only if it's on the local host,
 // as it wouldn't make sense to persist data over the network, since that's
-// what the MQTT client it trying to do.
+// what the MQTT client is trying to do.
 //
 class sample_mem_persistence : virtual public mqtt::iclient_persistence
 {
@@ -90,7 +90,7 @@ public:
 		store_.clear();
 	}
 
-	// Returns whether or not data is persisted using the specified key.
+	// Returns whether data is persisted using the specified key.
 	bool contains_key(const std::string &key) override {
 		return store_.find(key) != store_.end();
 	}
@@ -160,7 +160,7 @@ public:
 
 int main(int argc, char* argv[])
 {
-	std::cout << "Initialzing..." << std::endl;
+	std::cout << "Initializing..." << std::endl;
 	sample_mem_persistence persist;
 	mqtt::client client(SERVER_ADDRESS, CLIENT_ID, &persist);
 
@@ -215,4 +215,3 @@ int main(int argc, char* argv[])
 	std::cout << "\nExiting" << std::endl;
  	return 0;
 }
-
